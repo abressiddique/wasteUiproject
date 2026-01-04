@@ -1,42 +1,176 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.birthday-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #6b8dd6 100%);
+  overflow: hidden;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacOSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: white;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -50px;
+  left: var(--left);
+  font-size: var(--size);
+  animation: floatUp var(--duration) linear var(--delay) forwards;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
+  font-weight: 800;
+  margin: 0.4em 0;
+  background: linear-gradient(to right, #ff6b6b, #ff8e53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
 }
 
-@keyframes logo-spin {
+.bounce {
+  animation: bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.nickname-container {
+  margin: 1.5rem 0 2.5rem;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.my-name,
+.nickname {
+  font-weight: 700;
+}
+
+.nickname {
+  color: #ff69b4;
+  font-size: 2.8rem;
+}
+
+.heart-big {
+  font-size: 3.5rem;
+  animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.35);
+  }
+}
+
+.special-date {
+  font-size: 1.8rem;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  margin: 1rem 0 3rem;
+}
+
+.surprise-btn {
+  padding: 1.2rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff3366, #ff6b6b);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 51, 102, 0.5);
+  transition: all 0.3s;
+  margin-top: 2rem;
+}
+
+.surprise-btn:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 15px 40px rgba(255, 51, 102, 0.6);
+}
+
+.message-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2.5rem 3rem;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 2rem 1rem;
+}
+
+.main-message,
+.second-message {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 1.5em 0;
+}
+
+.big-love {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 2em 0 1em;
+  color: #ffb3ba;
+  text-shadow: 0 0 20px rgba(255, 179, 186, 0.6);
+}
+
+.small-hearts {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.footer {
+  margin-top: 3rem;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* Animation for message reveal */
+.fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
