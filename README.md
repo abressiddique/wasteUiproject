@@ -1,12 +1,70 @@
-# React + Vite
+# Waste UI Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive user interface built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19:** Built with the latest React version for optimal performance and modern features.
+- **Vite:** Lightning-fast cold server start and instant HMR.
+- **Tailwind CSS (v4):** Utility-first CSS framework for rapid UI development.
+- **Responsive Design:** Fully responsive layout for all device sizes.
+- **GitHub Pages Integration:** Easily deployable using the included gh-pages setup.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/abressiddique/wasteUiproject.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd wasteUiproject
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.\
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run lint`
+
+Runs ESLint to check for code quality and style issues.
+
+### `npm run preview`
+
+Boots up a local static web server that serves the files from `dist` to preview the production build locally.
+
+### `npm run deploy`
+
+Builds the app and deploys the `dist` folder to the `gh-pages` branch for hosting on GitHub Pages.
+
+## Contributing
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) to understand how you can help make this project better.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
